@@ -12,10 +12,10 @@ type Product = {
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="group bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition duration-300">
+    <div className=" transition duration-300">
       
       {/* Image */}
-      <div className="relative bg-gray-100 rounded-lg flex items-center justify-center h-44">
+      <div className="relative bg-gray-100 flex items-center justify-center h-52">
         <Image
           src={product.image}
           alt={product.title}
@@ -39,18 +39,18 @@ export default function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* Rating */}
-      <div className="flex items-center gap-1 mt-3 text-sm text-gray-600">
+        <div className="flex items-center justify-center gap-1 mt-3 text-sm text-gray-600">
         ⭐ {product.rating}
         <span className="text-gray-400">| {product.sold} Sold</span>
       </div>
 
       {/* Title */}
-      <h3 className="text-sm mt-1 font-medium text-gray-800">
+      <h3 className="flex items-center justify-center text-sm mt-1 font-medium text-gray-800">
         {product.title}
       </h3>
 
       {/* Price */}
-      <div className="flex gap-2 mt-1 text-sm">
+      <div className="flex items-center justify-center gap-2 mt-1 text-sm">
         <span className="text-gray-400 line-through">{product.oldPrice}</span>
         <span className="text-green-700 font-semibold">{product.price}</span>
       </div>

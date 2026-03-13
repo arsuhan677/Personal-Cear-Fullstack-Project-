@@ -1,5 +1,5 @@
-import ProductCard from "./ProductCard";
-import { products } from "@/";
+import ProductCard from "@/components/productCrad/ProductCard";
+import { products } from "../../../../data/products";
 
 export default function BestSellingProducts() {
   return (
