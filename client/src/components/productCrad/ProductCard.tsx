@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Button from "../buttone/Button";
 
 type Product = {
   id: number;
@@ -23,18 +24,8 @@ export default function ProductCard({ product }: { product: Product }) {
           height={140}
           className="object-contain"
         />
-
-        {/* Hover Buttons */}
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition">
-          
-          <button className="bg-green-700 text-white text-sm px-4 py-1.5 rounded-full hover:bg-green-800">
-            Add to Cart
-          </button>
-
-          <button className="border border-green-700 text-green-700 text-sm px-4 py-1.5 rounded-full hover:bg-green-700 hover:text-white">
-            Compare
-          </button>
-
+        <div>
+          <Button />
         </div>
       </div>
 
